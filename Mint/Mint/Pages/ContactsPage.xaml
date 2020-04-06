@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Contacts"
+             BackgroundColor="WhiteSmoke"
+              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             x:Class="Mint.Pages.ContactsPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="10,20,10,10">
+            <ActivityIndicator x:Name="LoadingIndicator" IsVisible="True" IsRunning="False" Color="Black" />
+            <syncfusion:SfListView x:Name="ContactList" SelectionMode="Multiple" SelectionBackgroundColor="Orange"/>
+
+            <Button x:Name="ForwardButton" Text="Next" BackgroundColor="#0084d7" TextColor="White" Clicked="ForwardButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
